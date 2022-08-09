@@ -1,0 +1,20 @@
+cordova plugin remove cordova-plugin-console
+
+OLD
+============================================================
+cordova build --release android
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore aws.keystore aws.apk aws
+zipalign -v 4 aws.apk aws-final.apk
+============================================================
+
+NEW
+============================================================
+cordova build android --release
+zipalign -f 4 platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk aws.apk
+apksigner sign --ks aws.keystore --ks-pass file:passfile.txt --v1-signing-enabled true --v2-signing-enabled true aws.apk
+============================================================
+
+
+Incase you dont have a key already generated for the app
+keytool -genkey -v -keystore aws.keystore -alias aws -keyalg RSA -keysize 2048 -validity 10000
+

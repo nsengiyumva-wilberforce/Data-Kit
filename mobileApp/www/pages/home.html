@@ -1,0 +1,63 @@
+<div data-name="home" class="page">
+
+	<!-- Top Navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="left">
+				<a href="#" class="link panel-open">
+					<i class="f7-icons">menu</i>
+				</a>
+			</div>
+			<!-- <div class="title">Search Bar</div> -->
+			<div class="right">
+				<a class="link icon-only searchbar-enable" data-searchbar=".searchbar">
+					<i class="f7-icons">search</i>
+				</a>
+			</div>
+
+			<form class="searchbar searchbar-forms searchbar-expandable">
+				<div class="searchbar-inner">
+					<div class="searchbar-input-wrap">
+						<input type="search" placeholder="Search"/>
+						<i class="searchbar-icon"></i>
+						<span class="input-clear-button"></span>
+					</div>
+					<span class="searchbar-disable-button">Cancel</span>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div class="page-content">
+
+		<!-- Searchbar backdrop -->
+		<!-- <div class="searchbar-backdrop"></div> -->
+
+		<div class="list searchbar-found">
+			<ul>
+				{{#each forms}}
+				<li>
+					<a href="{{path}}" class="item-link item-content">
+						<div class="item-inner">
+							<div class="item-title">
+								<div class="item-header">Created: {{created_at}}</div>
+								{{title}}
+							</div>
+						</div>
+					</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+
+	<!-- Floating Action Button -->
+	<div class="fab fab-right-bottom">
+		<a id="download-forms" href="#">
+			<i class="f7-icons">refresh</i>
+		</a>
+	</div>
+
+</div>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- Color theme for statusbar -->
+	<meta name="theme-color" content="#2196f3">
+	<!-- Your app title -->
+	<title>Survey King - AWS</title>
+	<!-- Path to Framework7 Library CSS -->
+	<link rel="stylesheet" type="text/css" href="framework7/css/framework7.bundle.css">
+	<link rel="stylesheet" type="text/css" href="assets/fonts/framework7-icons-master/css/framework7-icons.css">
+	<!-- Path to your custom app styles-->
+	<link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+	<div id="app">
+		<!-- Left panel -->
+		<div class="panel panel-left panel-cover">
+			<div class="content-block" style="height: 200px; background-color: #CCCCCC;">
+				<a href="#" class="link panel-close">
+					<i class="f7-icons">close</i>
+				</a>
+			</div>
+			<div class="list no-hairlines no-hairlines-between">
+				<ul>
+					<li>
+						<a href="#" id="restore-entries" class="item-link item-content panel-close">
+							<div class="item-media">
+								<i class="f7-icons">download</i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Restore</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="item-link item-content panel-close">
+							<div class="item-media">
+								<i class="f7-icons">info_round</i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">About</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="item-link item-content panel-close">
+							<div class="item-media">
+								<i class="f7-icons">gear</i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Settings</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#" id="sign-out" class="item-link item-content">
+							<div class="item-media">
+								<i class="f7-icons">exit</i>
+							</div>
+							<div class="item-inner">
+								<div class="item-title">Logout</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Your main view, should have "view-main" class -->
+		<div class="view view-main safe-areas">
+			<!-- Initial Page, "data-name" contains page name -->
+			<div data-name="root" class="page">
+				<!-- Scrollable page content -->
+				<div class="page-content quick-splashscreen">
+									
+					<div class="text-wrapper">
+						<img src="assets/images/logo.png" alt="" style="width: 100%; margin: 100px auto;" class="margin-bottom">
+						<h3 class="title-text">AWS Data Kit</h3>
+						<small class="sub-title-text">Version 2.0.1</small>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Path to Framework7 Library JS-->
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="framework7/js/framework7.bundle.min.js"></script>
+
+
+	<!-- Partial Templates -->
+	<script id="temp-entry-list-item" type="text/template7">
+		<li class="item-content">
+			<a href="/entry/?id={{entry_id}}&action=view" class="item-link item-inner longpress">
+				<div class="item-title">
+					<div class="item-header">{{subtitle}}</div>
+					{{title}}
+				</div>
+			</a>
+		</li>
+	</script>
+
+	<script id="temp-entry-followup-list-item" type="text/template7">
+		<li class="item-content">
+			<a href="/entry/?id={{entry_id}}&action=add-followup" class="item-link item-inner longpress">
+				<div class="item-title">
+					<div class="item-header">{{subtitle}}</div>
+					{{title}}
+				</div>
+			</a>
+		</li>
+	</script>
+
+
+	<script id="temp-entry-list-item-avec-checkbox" type="text/template7">
+		<li class="item-content">
+			<label class="item-checkbox" style="display: none;">
+				<input type="checkbox" name="entry_id" value="{{entry_id}}"/>
+				<i class="icon icon-checkbox"></i>
+			</label>
+			<a href="/entry/?id={{entry_id}}&action=view" class="item-link item-inner longpress">
+				<div class="item-title">
+					<div class="item-header">{{subtitle}}</div>
+					{{title}}
+				</div>
+			</a>
+		</li>
+	</script>
+
+	<!-- Custom App Scripts -->
+	<script type="text/javascript" src="assets/js/routes.js"></script>
+	<script type="text/javascript" src="assets/js/events.js"></script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<script type="text/javascript" src="assets/js/aws-custom.js"></script>
+</body>
+</html>

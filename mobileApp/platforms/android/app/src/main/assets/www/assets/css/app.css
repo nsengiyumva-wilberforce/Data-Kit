@@ -1,0 +1,87 @@
+/* Custom color theme properties */
+:root {
+  --f7-theme-color: #2196f3;
+  --f7-theme-color-rgb: 33, 150, 243;
+  --f7-theme-color-shade: #0c82df;
+  --f7-theme-color-tint: #48a8f5;
+}
+
+/* Your app custom styles here */
+.bold {
+	font-weight: bold !important;
+}
+
+
+
+
+
+.button-form {
+	margin-top: var(--f7-card-margin-vertical);
+	margin-bottom: var(--f7-card-margin-vertical);
+	margin-left: calc(var(--f7-card-margin-horizontal) + var(--f7-safe-area-left));
+	margin-right: calc(var(--f7-card-margin-horizontal) + var(--f7-safe-area-right));
+}
+
+
+
+
+
+
+/* Splash screen */
+.quick-splashscreen {
+/*    color: #FFFFFF;
+    background-color: var(--f7-color-blue);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quick-splashscreen .text-wrapper {
+  text-align: center;    
+}
+
+.quick-splashscreen .text-wrapper .title-text {
+    font-size: 36px;
+/*    font-family: modulus-bold;
+    text-transform: lowercase;*/
+    margin: 0;
+}
+
+.quick-splashscreen .text-wrapper .sub-title-text {
+    
+}
+
+
+
+
+
+/* App slide */
+.swiper-container {
+  height: 100%;
+}
+
+.swiper-container .swiper-slide {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper-container .swiper-slide .swiper-text {
+  height: 70%;
+  text-align: center;
+  padding: 30px 20px;
+  color: #FFFFFF;
+}
+
+/*.swiper-container .swiper-slide .text-icon {
+  height: 70%;
+}*/
+
+.swiper-container .swiper-slide .text-title {
+  font-size: 32px;
+}
+
+.swiper-container .swiper-slide .text-content {
+  font-size: 16px;
+  margin: 20px 0;
+}

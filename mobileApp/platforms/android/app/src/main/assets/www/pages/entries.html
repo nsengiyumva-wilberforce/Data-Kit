@@ -1,0 +1,133 @@
+<div data-name="entries" class="page">
+
+	<!-- Top Navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="left">
+				<a href="#" class="link back">
+					<i class="f7-icons">chevron_left</i>
+				</a>
+			</div>
+			<!-- <div class="title">{{title}}</div> -->
+			<div class="title page-title">{{title}}</div>
+			<div class="title counter-title"></div>
+			
+			<div class="right">
+				<a class="link icon-only searchbar-enable default-options" data-searchbar=".searchbar">
+					<i class="f7-icons">search</i>
+				</a>
+				<!-- Longpress actions -->
+				<a class="link longpress-options" id="bulk-commit" data-group="{{group}}">
+					<i class="f7-icons">paper_plane</i>
+				</a>
+				<a class="link longpress-options" id="bulk-purge">
+					<i class="f7-icons">trash</i>
+				</a>
+			</div>
+
+
+			<!-- <form class="searchbar searchbar-entries searchbar-expandable"> -->
+			<!-- {{#js_if "this.fab == 'download_entries'"}} -->
+			<form class="searchbar searchbar-entries searchbar-expandable searchbar-init" data-search-container=".virtual-list-new" data-search-item="li" data-search-in=".item-title">
+				<div class="searchbar-inner">
+					<div class="searchbar-input-wrap">
+						<input type="search" placeholder="Search"/>
+						<i class="searchbar-icon"></i>
+						<span class="input-clear-button"></span>
+					</div>
+					<span class="searchbar-disable-button">Cancel</span>
+				</div>
+			</form>
+			<!-- {{/js_if}} -->
+
+			<!-- {{#js_if "this.fab == 'add_entries'"}} -->
+			<form class="searchbar searchbar-entries searchbar-expandable searchbar-init" data-search-container=".virtual-list-drafted" data-search-item="li" data-search-in=".item-title">
+				<div class="searchbar-inner">
+					<div class="searchbar-input-wrap">
+						<input type="search" placeholder="Search"/>
+						<i class="searchbar-icon"></i>
+						<span class="input-clear-button"></span>
+					</div>
+					<span class="searchbar-disable-button">Cancel</span>
+				</div>
+			</form>
+			<!-- {{/js_if}} -->
+
+
+			<form class="searchbar searchbar-entries searchbar-expandable searchbar-init" data-search-container=".virtual-list-committed" data-search-item="li" data-search-in=".item-title">
+				<div class="searchbar-inner">
+					<div class="searchbar-input-wrap">
+						<input type="search" placeholder="Search"/>
+						<i class="searchbar-icon"></i>
+						<span class="input-clear-button"></span>
+					</div>
+					<span class="searchbar-disable-button">Cancel</span>
+				</div>
+			</form>
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+
+	<div class="toolbar tabbar toolbar-top">
+		<div class="toolbar-inner">
+			{{#js_if "this.fab == 'add_entries'"}}
+			<a href="#tab-drafted" class="tab-link tab-link-active">Drafts</a>
+			<a href="#tab-committed" class="tab-link">Committed</a>
+			{{/js_if}}
+
+			{{#js_if "this.fab == 'download_entries'"}}
+			<a href="#tab-new" class="tab-link tab-link-active">New</a>
+			<a href="#tab-drafted" class="tab-link">Drafts</a>
+			<a href="#tab-committed" class="tab-link">Committed</a>
+			{{/js_if}}
+		</div>
+	</div>
+
+
+	<div class="tabs">
+		{{#js_if "this.fab == 'add_entries'"}}
+		<div id="tab-drafted" class="page-content tab tab-active">
+			<form id="form-entries-list" class="list virtual-list virtual-list-drafted"></form>
+		</div>
+		<div id="tab-committed" class="page-content tab">
+			<div id="form-uploaded-entries-list" class="list virtual-list virtual-list-committed"></div>
+		</div>
+		{{/js_if}}
+
+		{{#js_if "this.fab == 'download_entries'"}}
+		<div id="tab-new" class="page-content tab tab-active">
+			<form id="form-entries-list-new" class="list virtual-list virtual-list-new"></form>
+		</div>
+		<div id="tab-drafted" class="page-content tab">
+			<form id="form-entries-list" class="list virtual-list virtual-list-drafted"></form>
+		</div>
+		<div id="tab-committed" class="page-content tab">
+			<div id="form-uploaded-entries-list" class="list virtual-list virtual-list-committed"></div>
+		</div>
+		{{/js_if}}
+	</div>
+
+
+	<!-- Floating Action Button -->
+	<div class="fab fab-right-bottom">
+	{{#js_if "this.fab == 'add_entries'"}}
+		<a id="" href="/entry/?form_id={{form_id}}&action=add">
+			<i class="f7-icons">add</i>
+		</a>
+	{{/js_if}}
+	{{#js_if "this.fab == 'download_entries'"}}
+		<a id="download-followup-entries" data-form-id="{{form_id}}" href="#">
+			<i class="f7-icons">download</i>
+		</a>
+	{{/js_if}}
+	</div>
+
+
+</div>

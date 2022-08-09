@@ -1,0 +1,69 @@
+<div data-name="entry-view" class="page">
+
+	<!-- Top Navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="left">
+				<a href="#" class="link back">
+					<i class="f7-icons">chevron_left</i>
+				</a>
+			</div>
+			<div class="title">{{title}}</div>
+			<div class="right">
+				<a href="#" class="link actions-open" data-actions=".entry-actions">
+					<i class="f7-icons">more_vertical_fill</i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="page-content">
+		<div class="block">
+
+			{{#each questions}}
+			<div class="block-item margin-bottom">
+				<small class="display-block">Question {{js "this.@index +1"}}/{{../count}}</small>
+				<span class="display-block bold">{{question}}</span>
+				<span class="display-block">{{answers}}</span>
+			</div>
+			{{/each}}
+
+			{{js_if "this.is_geotagged == 1"}}
+			<div class="block-item margin-bottom">
+				<span class="display-block bold">Location Cordinates</span>
+				<!-- <span class="display-block">32.455697, 0.249755</span> -->
+				<span class="display-block">{{coordinates}}</span>
+			</div>
+			{{/js_if}}
+
+			{{js_if "this.is_photograph == 1"}}
+			<div class="block-item margin-bottom">
+				<img src="{{photo}}" alt="" style="width: 100%">
+			</div>
+			{{/js_if}}
+
+		</div>
+	</div>
+
+	<!-- Actions Modal -->
+	<div class="actions-modal entry-actions">
+		<div class="actions-group">
+			<div class="actions-label">What would you like to do?</div>
+			<div class="actions-button actions-button-bold">
+				<a href="/entry/?id={{id}}&action=edit&status={{status}}" class="actions-button-text actions-close">Edit</a>
+			</div>
+			<div class="actions-button actions-button-bold">
+				<div id="commit-entry" data-entry-id="{{id}}" data-status="{{status}}" class="actions-button-text actions-close">Commit</div>
+			</div>
+			<div class="actions-button actions-button-bold">
+				<div id="purge-entry" data-entry-id="{{id}}" data-status="{{status}}" class="actions-button-text actions-close">Delete</div>
+			</div>
+			<div class="actions-button">
+				<div class="actions-button-text actions-close">Cancel</div>
+			</div>
+		</div>
+	</div>
+
+</div>

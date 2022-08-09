@@ -1,0 +1,56 @@
+{
+    "name": "com.aws.app",
+    "displayName": "AWS",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "ecosystem:cordova"
+    ],
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "es6-promise-plugin": "^4.2.2"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-camera": {
+                "ANDROIDX_CORE_VERSION": "1.6.+"
+            },
+            "cordova-plugin-file": {
+                "ANDROIDX_CORE_VERSION": "1.6.+"
+            },
+            "cordova-plugin-geolocation": {
+                "ANDROIDX_CORE_VERSION": "1.6.+",
+                "GPS_REQUIRED": "true"
+            },
+            "cordova-plugin-network-information": {
+                "ANDROIDX_CORE_VERSION": "1.6.+",
+                "GPS_REQUIRED": "true"
+            },
+            "cordova-plugin-screen-orientation": {
+                "ANDROIDX_CORE_VERSION": "1.6.+",
+                "GPS_REQUIRED": "true"
+            },
+            "cordova-sqlite-storage": {
+                "ANDROIDX_CORE_VERSION": "1.6.+",
+                "GPS_REQUIRED": "true"
+            }
+        },
+        "platforms": [
+            "android"
+        ]
+    },
+    "devDependencies": {
+        "cordova-android": "^10.1.1",
+        "cordova-plugin-camera": "^6.0.0",
+        "cordova-plugin-file": "^6.0.2",
+        "cordova-plugin-geolocation": "^4.1.0",
+        "cordova-plugin-network-information": "^3.0.0",
+        "cordova-plugin-screen-orientation": "^3.0.2",
+        "cordova-sqlite-storage": "^6.0.0"
+    }
+}
