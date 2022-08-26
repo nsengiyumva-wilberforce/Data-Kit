@@ -1,5 +1,3 @@
-
-
 // SQLite Functions
 function onDeviceReady() {
 	db.transaction(function(tx) {
@@ -158,17 +156,22 @@ function authenticate(username, password) {
 			}, function() {
 				console.log('User Succesfully Added or Updated');
 				// App user vars
+					
+
 				app_user = {user_id: user.user_id, first_name: user.first_name, last_name: user.last_name, email: user.email, password: user.password, region_id: user.region_id, region_name: user.region_name, region_code: user.code, settings: user.settings, logged_in: 1};
 				entry_prefix = 'AWS-'+app_user.code+'-U'+leadZeros(app_user.user_id, 4)+'-';
 				// Download Data
+				
 				downloadAreas(user.user_id);
 				downloadProjects();
 				downloadOrganisations();
+				downloadForms();
 				// downloadProjects(user.region_id);
 				// Set template7 global variables
 				Template7.global = {app_user: app_user};
 				mainView.router.navigate('/home/');
-				app.progressbar.hide();
+				//app.progressbar.hide();
+				dialog.close();	
 			});
 		} else {
 			app.progressbar.hide();
@@ -186,7 +189,7 @@ function authenticate(username, password) {
 
 
 function downloadForms() {
-	app.dialog.progress();
+	//app.dialog.progress();
 	console.log('Downloading Forms');
 
 	let executeQuery = 'DELETE FROM form;';
@@ -243,14 +246,15 @@ function downloadForms() {
 							console.log(error);
 							console.log('Transaction ERROR: ' + error.message);
 						}, function() {
-							console.log('Form ' + title + ' Succesfully Inserted');
+							console.log('Form ' + title + question_list+' Succesfully Inserted');
 							// mainView.router.navigate('/home/');
 							// mainView.router.refreshPage();
 
 						});
 					}
 					console.log(forms.length+' Forms Succesfully Transfered');
-					app.dialog.close();
+			
+					mainView.router.navigate('/home/');
 				});
 
 			},

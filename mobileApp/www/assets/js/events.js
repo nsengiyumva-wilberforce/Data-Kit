@@ -1,4 +1,3 @@
-
 $$(document).on('page:init', '.page', function(e) {
 	// Sign out
 	$$(document).on('click', '#sign-out', function(event) {
@@ -542,4 +541,3 @@ $$(document).on('page:init', '.page[data-name="entry-view"]', function (e) {
 	});
 
 });
-

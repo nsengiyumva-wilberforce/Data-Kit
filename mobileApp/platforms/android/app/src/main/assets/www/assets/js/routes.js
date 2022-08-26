@@ -10,6 +10,8 @@ var autoselect = true;
 // var base_url = 'http://116.203.142.9/aws-api-bak/index.php/app/';
 // var base_url = 'https://dashboard.africawatersolutions.org/api/index.php/app/';
 var base_url = 'https://dashboard.africawatersolutions.org/aws.api/public/'; // New Remote APIs
+//var base_url = 'http://localhost/AWSPROJECT/api/public/'; // New Remote APIs
+
 // var base_url = 'http://192.168.1.107/aws/api/public/'; // Home Network
 // var base_url = 'http://10.163.171.155/aws.api/public/'; // Broadband Network
 // var base_url = 'http://192.168.249.29/aws/api/public/'; // OnePlus Mobile Hotspot
@@ -52,8 +54,9 @@ var app = new Framework7({
 					transaction.executeSql(executeQuery, fields, 
 						function(tx, result) {
 							if (result.rows.length === 0) {
-								downloadForms();
-								mainView.router.navigate('/home/');
+								app.router.refreshPage();
+								//downloadForms();
+								//mainView.router.navigate('/home/');
 							} else {
 								let data = {};
 								let forms = [];
@@ -69,9 +72,12 @@ var app = new Framework7({
 								data.forms = forms;
 								// console.log(data);
 								resolve(
+									
 									{templateUrl: './pages/home.html'}, // list of forms
 									{context: data}
+								
 								);
+								
 							}
 						},
 						function (tx, error) {
@@ -144,7 +150,6 @@ var app = new Framework7({
 					executeQuery = 'SELECT entry_id, title, subtitle, status FROM entry WHERE form_id = ? AND (status = ? OR status = ? OR status = ?);';
 					fields = [data.form_id, 1100, 1110, 1111];
 				}
-				// console.log(executeQuery);
 
 				db.transaction(function(transaction) {
 					transaction.executeSql(executeQuery, fields, 
@@ -368,6 +373,7 @@ var app = new Framework7({
 
 								let executeQuery = 'SELECT form_id, question_list, conditional_logic, followup_prefill, is_geotagged, is_photograph FROM form WHERE form_id = ?;';
 								let fields = [entryData.form_id];
+
 								db.transaction(function(transaction) {
 									transaction.executeSql(executeQuery, fields, 
 										function(tx, result) {
@@ -378,13 +384,12 @@ var app = new Framework7({
 											data.questions = JSON.parse(form.question_list);
 											data.count = data.questions.length;
 											data.entry_id = entryData.entry_id;
-											data.title = entryData.entry_title;
+											data.title = entryData.title;
 											data.status = entryData.status;
 											data.is_geotagged = form.is_geotagged;
 											data.is_photograph = form.is_photograph;
 
 											conditional_logic = JSON.parse(form.conditional_logic);
-											console.log(data);
 											resolve(
 												{templateUrl: './pages/entry-followup-add.html'}, // list of forms
 												{context: data}
@@ -393,12 +398,14 @@ var app = new Framework7({
 											$$(document).on('page:init', '.page[data-name="entry-followup-add"]', function (e) {
 												setTimeout( function() {
 													autoselect = false;
-													let entry = JSON.parse(entryData.json_entry_data);
-													let followup_prefill = JSON.parse(form.followup_prefill);
+													let entry = JSON.parse(entryData.responses);
+													let followup_pref = JSON.parse(form.followup_prefill);
+													let followup_prefill = JSON.parse(followup_pref)
 													let prefill = {};
 													for (var i = 0; i < followup_prefill.length; i++) {
-														let key = 'qn'+followup_prefill[i].trim();
-														prefill[key] = entry[key];
+														let key = 'qn'+followup_prefill[i];
+														
+														prefill[key] = entry[0][key];
 													}
 													console.log(prefill);
 													app.form.fillFromData('#form-add-entry-followup', prefill);
@@ -442,13 +449,13 @@ var app = new Framework7({
 											let data = {};
 											data.count = form.questions.length;
 											data.id = entryData.entry_id;
-											data.title = entryData.entry_title;
+											data.title = entryData.title;
 											data.is_geotagged = rs.is_geotagged;
 											data.is_photograph = rs.is_photograph;
 
 											let entry_data = undefined;
 											if (entryData.status == 1000 || entryData.status == 1100) {
-												data.questions = mapData(form, JSON.parse(entryData.responses));
+												data.questions = mapData(form, JSON.parse(entryData.responses)[0]);
 												entry_data = JSON.parse(entryData.responses);
 											} else if(entryData.status == 1110 || entryData.status == 1111) {
 												data.questions = mapData(form, JSON.parse(entryData.responses));
@@ -457,9 +464,6 @@ var app = new Framework7({
 											data.coordinates = entry_data.coordinates;
 											data.photo = entry_data.photo;
 											data.status = entry_data.status;
-											console.log(data);
-											// checkFile(entry_data);
-
 											resolve(
 												{templateUrl: './pages/entry-view.html'}, // list of forms
 												{context: data}
@@ -483,7 +487,6 @@ var app = new Framework7({
 						transaction.executeSql(executeQuery, fields, 
 							function(tx, result) {
 								let entryData = result.rows.item(0);
-								console.log(entryData);
 
 								let executeQuery = 'SELECT form_id, question_list, conditional_logic, is_geotagged, is_photograph FROM form WHERE form_id = ?;';
 								let fields = [entryData.form_id];
@@ -497,11 +500,10 @@ var app = new Framework7({
 											data.questions = JSON.parse(form.question_list);
 											data.count = data.questions.length;
 											data.entry_id = entryData.entry_id;
-											data.title = entryData.entry_title;
+											data.title = entryData.title;
 											data.status = entryData.status;
 											data.is_geotagged = form.is_geotagged;
 											data.is_photograph = form.is_photograph;
-											console.log(data);
 											resolve(
 												{templateUrl: './pages/entry-edit.html'}, // list of forms
 												{context: data}
@@ -617,4 +619,3 @@ $$(document).on('taphold', '.longpress', function () {
 	$$('.default-options').hide();
 	checkboxToggleBack();
 });
-
