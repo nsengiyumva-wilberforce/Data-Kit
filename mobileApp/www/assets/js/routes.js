@@ -135,19 +135,19 @@ var app = new Framework7({
 				if (group == 'all') {
 					data.title = 'Entries';
 					data.fab = 'add_entries';
-					executeQuery = 'SELECT entry_id, title, subtitle, status FROM entry WHERE form_id = ?;';
+					executeQuery = 'SELECT entry_id, title, subtitle, status FROM entry WHERE form_id = ? ORDER BY created_at ASC;';
 					fields = [data.form_id];
 				} else if (group == 'baseline') {
 					data.title = 'Baseline';
 					data.fab = 'add_entries';
 					// executeQuery = 'SELECT entry_id, title, subtitle, status FROM entry WHERE form_id = ? AND (status = ? OR status = ?) AND is_creator = ?;';
 					// fields = [data.form_id, 1000, 1100, 1];
-					executeQuery = 'SELECT entry_id, title, subtitle, status FROM entry WHERE form_id = ? AND (status = ? OR status = ?);';
+					executeQuery = 'SELECT entry_id, title, subtitle, status FROM entry WHERE form_id = ? AND (status = ? OR status = ?) ORDER BY created_at ASC;';
 					fields = [data.form_id, 1000, 1100];
 				} else if (group == 'followup') {
 					data.title = 'Follow-up';
 					data.fab = 'download_entries';
-					executeQuery = 'SELECT entry_id, title, subtitle, status FROM entry WHERE form_id = ? AND (status = ? OR status = ? OR status = ?);';
+					executeQuery = 'SELECT entry_id, title, subtitle, status FROM entry WHERE form_id = ? AND (status = ? OR status = ? OR status = ?) ORDER BY created_at ASC;';
 					fields = [data.form_id, 1100, 1110, 1111];
 				}
 

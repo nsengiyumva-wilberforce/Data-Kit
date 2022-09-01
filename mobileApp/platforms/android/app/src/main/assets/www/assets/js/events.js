@@ -182,9 +182,13 @@ $$(document).on('page:init', '.page[data-name="entry-add"], .page[data-name="ent
 
 
 $$(document).on('page:init', '.page[data-name="entry-add"]', function (e) {
+	let entry_prefix = 'AWS-'+app_user.region_code+'-U'+leadZeros(app_user.user_id, 4)+'-';
+	console.log("whats the entry prefix", entry_prefix)
+
 
 	let submit = true;
 	$$(document).on('click', '#save-btn, #save-commit-btn', function(event) {
+
 		// event.preventDefault();
 		event.stopImmediatePropagation();
 		if (submit) {
@@ -194,13 +198,13 @@ $$(document).on('page:init', '.page[data-name="entry-add"]', function (e) {
 			let formData = app.form.convertToData('#form-add-entry');
 
 
-			if (checkEntryFields(formData)) {
+			if (formData) {
 				// Move photo to data directory and update file path
-				if (formData.photo != undefined) {
-					console.log(formData.photo);
-					moveFile(formData.photo);
-					formData.photo = formData.photo.replace(cordova.file.externalCacheDirectory, cordova.file.externalDataDirectory);
-				}
+				// if (formData.photo != undefined) {
+				// 	console.log(formData.photo);
+				// 	moveFile(formData.photo);
+				// 	formData.photo = formData.photo.replace(cordova.file.externalCacheDirectory, cordova.file.externalDataDirectory);
+				// }
 
 				formData.entity_type = 'baseline';
 				formData.creator_id = app_user.user_id;
@@ -214,6 +218,8 @@ $$(document).on('page:init', '.page[data-name="entry-add"]', function (e) {
 				entry.responses = formData;
 				entry.status = 1000;
 				entry.created_at = formData.created_at;
+				entry.photo = 'file:///storage/emulated/0/Android/data/com.aws.app/files/1550492348464.jpg'
+
 
 				// console.log(entry);
 
@@ -225,7 +231,7 @@ $$(document).on('page:init', '.page[data-name="entry-add"]', function (e) {
 				// entry.is_creator = 1;
 				// entry.date_created = timeStamp;
 				// entry.date_modified = timeStamp;
-
+console.log("the etry daaaata",entry)
 				saveEntry(entry, btn);
 				// console.log(mainView.router.previousRoute.url);
 				mainView.router.back(mainView.router.previousRoute.url, {ignoreCache: true, force:true, reloadPrevious: true});
