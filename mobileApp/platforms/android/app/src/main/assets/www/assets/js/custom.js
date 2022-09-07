@@ -1,3 +1,5 @@
+
+
 // SQLite Functions
 function onDeviceReady() {
 	db.transaction(function(tx) {
@@ -29,7 +31,6 @@ function onDeviceReady() {
 	db.transaction(function (transaction) {
 		transaction.executeSql(executeQuery, fields,
 			function (tx, result) {
-				// console.log(result.rows.item(0));
 				if (result.rows.item(0).tables == 0) {
 					console.log('entry_old does not exist');
 
@@ -399,15 +400,24 @@ function geoLocation() {
 	}, { enableHighAccuracy: true });
 }
 
+window.FilePath.resolveNativePath(cached_photo_path, function(result) {
+	// onSuccess code
+	imageURI = 'file://' + result;
+console.log(imageURI);
+$$('input[name="photo"]').val(imageURI);
+$$('#capture-photo').attr('src',imageURI);
+})
+
 function photoPath() {
 	navigator.camera.getPicture(function(cached_photo_path) {
-		console.log(cached_photo_path);
+		console.log("the path",cached_photo_path);
 		$$('input[name="photo"]').val(cached_photo_path);
 		$$('#capture-photo').attr('src',cached_photo_path);
 	}, function(err) {
 		console.log(err);
 	}, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
 }
+
 
 function mapData(form, formData) {
 	// console.log(formData);
@@ -457,6 +467,7 @@ function saveEntry(data, action) {
 	// let executeQuery = 'SELECT entry_title, entry_subtitle FROM form WHERE form_id = ?;';
 	let executeQuery = 'SELECT * FROM form WHERE form_id = ?;';
 	let fields = [data.form_id];
+
 	db.transaction(function(transaction) {
 		transaction.executeSql(executeQuery, fields, 
 			function(tx, result) {
@@ -515,6 +526,7 @@ function saveEntry(data, action) {
 
 
 function insertEntry(entry, commit_entry = false) {
+	
 	db.transaction(function(tx1) {
 		// Check if entry exists
 		let executeQuery = 'SELECT count(*) AS record_count FROM entry WHERE form_id = ? AND responses = ? AND status = ? AND created_at = ?';
@@ -594,6 +606,7 @@ function insertEntry(entry, commit_entry = false) {
 
 
 function updateEntry(data, commit_entry = false, notify = true) {
+	console.log("the updatesssss")
 // function updateEntry(data, entry_type = 'baseline', commit_entry = false, notify = true) {
 	// let executeQuery = undefined;
 	// let fields = undefined;
@@ -618,13 +631,14 @@ function updateEntry(data, commit_entry = false, notify = true) {
 			app.toast.show({text: 'Entry Changes Saved', closeTimeout: 3000});
 		}
 		if (commit_entry) {
-			commitEntry(data.entry_id, entry_type);
+			commitEntry(data.entry_id, data.responses.entity_type);
 		}
 	});
 }
 
 
 function updateEntryStatus(entry_id, status) {
+
 	let executeQuery = 'UPDATE entry SET status = ? WHERE entry_id = ?;'
 	let fields = [status, entry_id];
 	db.transaction(function(tx) {
@@ -651,8 +665,8 @@ function commitEntry(entry_id) {
 					// entry_form_id: entry.entry_id,
 					response_id: entry.entry_id,
 					form_id: entry.form_id,
-					title: entry.entry_title,
-					sub_title: entry.entry_subtitle,
+					title: entry.entry_title ?? entry.title,
+					sub_title: entry.entry_subtitle ?? entry.subtitle,
 					responses: entry.responses,
 					created_at: entry.created_at
 				}
@@ -668,12 +682,12 @@ function commitEntry(entry_id) {
 				let form_post_url = undefined;
 				if (responses.entity_type == 'baseline') {
 					// form_post_url = base_url+'commit-form';
-					form_post_url = base_url + 'entry/add';
+					form_post_url = base_url + 'entry/add-followup';
 				} else if (responses.entity_type == 'followup') {
 					// form_post_url = base_url+'commit-followup-form';
 					form_post_url = base_url + 'entry/add-followup';
 				}
-				console.log(form_data);
+
 
 				app.request.post(form_post_url, form_data, function (result) {
 					console.log(result);
@@ -688,11 +702,11 @@ function commitEntry(entry_id) {
 						// }
 
 						// let data = {};
-						if (responses.photo != undefined) {
-							console.log('photo conversion');
-							// let photo_src = responses.entity_type == 'baseline' ? 'json_response' : 'json_followup';
-							commitFile(responses.photo, app_user.user_id, entry.entry_id);
-						}
+						// if (responses.photo != undefined) {
+						// 	console.log('photo conversion');
+						// 	// let photo_src = responses.entity_type == 'baseline' ? 'json_response' : 'json_followup';
+						// 	commitFile(responses.photo, app_user.user_id, entry.entry_id);
+						// }
 
 						console.log('Succesfully commited');
 						app.toast.show({text: 'Entry has been committed', closeTimeout: 3000});
@@ -720,7 +734,7 @@ function commitEntry(entry_id) {
 					}
 					
 				}, function (error) {
-					alert('Commit was unsuccessful');
+					alert('Commit was unsuccessfulkk');
 				});
 			},
 			function (tx, error) {
@@ -770,7 +784,6 @@ function commitEntryBatch(entry_ids) {
 					} else if (responses.entity_type == 'followup') {
 						form_post_url = base_url + 'entry/add-followup';
 					}
-					console.log(form_data);
 
 					app.request.post(form_post_url, form_data, function (result) {
 						console.log(result);

@@ -231,7 +231,6 @@ $$(document).on('page:init', '.page[data-name="entry-add"]', function (e) {
 				// entry.is_creator = 1;
 				// entry.date_created = timeStamp;
 				// entry.date_modified = timeStamp;
-console.log("the etry daaaata",entry)
 				saveEntry(entry, btn);
 				// console.log(mainView.router.previousRoute.url);
 				mainView.router.back(mainView.router.previousRoute.url, {ignoreCache: true, force:true, reloadPrevious: true});
@@ -260,9 +259,11 @@ console.log("the etry daaaata",entry)
 
 
 $$(document).on('page:init', '.page[data-name="entry-followup-add"]', function (e) {
+	let entry_prefix = 'AWS-'+app_user.region_code+'-U'+leadZeros(app_user.user_id, 4)+'-';
 
 	let submit = true;
 	$$(document).on('click', '#save-followup-btn, #save-commit-followup-btn', function(event) {
+		
 		// event.preventDefault();
 		event.stopImmediatePropagation();
 		if (submit) {
@@ -273,15 +274,18 @@ $$(document).on('page:init', '.page[data-name="entry-followup-add"]', function (
 			let formData = app.form.convertToData('#form-add-entry-followup');
 			let orig_photo = $$('#capture-photo').attr('src');
 
-			if (checkEntryFields(formData)) {
+			if (formData) {
 				let executeQuery = 'SELECT entry_title, entry_subtitle FROM form WHERE form_id = ?;';
 				let fields = [form_id];
 				db.transaction(function(transaction) {
 					transaction.executeSql(executeQuery, fields, 
 						function(tx, result) {
-							let form = result.rows.item(0);
-							let titles = title_maker(form, formData);
+						
 
+							let form = result.rows.item(0);
+
+							
+							//let titles = title_maker(form, formData);
 							// let entry_title = JSON.parse(form.entry_title);
 							// let entry_subtitle = JSON.parse(form.entry_subtitle);
 							// let data = {};
@@ -303,12 +307,13 @@ $$(document).on('page:init', '.page[data-name="entry-followup-add"]', function (
 
 
 							// Move photo to data directory and update file path
-							if (formData.photo != orig_photo) {
-								moveFile(formData.photo);
-								formData.photo = formData.photo.replace(cordova.file.externalCacheDirectory, cordova.file.externalDataDirectory);
-							}
+							// if (formData.photo != orig_photo) {
+							// 	moveFile(formData.photo);
+							// 	formData.photo = formData.photo.replace(cordova.file.externalCacheDirectory, cordova.file.externalDataDirectory);
+							// }
 
 							formData.entity_type = 'followup';
+							
 							formData.creator_id = app_user.user_id;
 							formData.created_at = js_yyyy_mm_dd_hh_mm_ss();
 
@@ -316,12 +321,13 @@ $$(document).on('page:init', '.page[data-name="entry-followup-add"]', function (
 							entry = {};
 							entry.entry_id = entry_prefix + timeStamp;
 							entry.form_id = form_id;
-							entry.title = titles.title;
-							entry.subtitle = titles.subtitle;
+							entry.title = JSON.parse(form.entry_title);
+							entry.subtitle = JSON.parse(form.entry_subtitle);
 							// entry.responses = JSON.stringify(formData);
 							entry.responses = formData;
 							entry.status = 1110;
 							entry.created_at = formData.created_at;
+							console.log("ffff", entry);
 
 
 
@@ -339,6 +345,7 @@ $$(document).on('page:init', '.page[data-name="entry-followup-add"]', function (
 							// entry.status = 1110;
 							// entry.is_creator = 1;
 							// entry.date_modified = timeStamp;
+
 							updateEntry(entry, 'followup', commit_entry, true);
 							mainView.router.back(mainView.router.previousRoute.url, {ignoreCache: true, force:true, reloadPrevious: true});
 							app.toast.show({
@@ -376,9 +383,11 @@ $$(document).on('page:init', '.page[data-name="entry-followup-add"]', function (
 
 
 $$(document).on('page:init', '.page[data-name="entry-edit"]', function (e) {
+	console.log("dfgfggggggggg");
 
 	let submit = true;
 	$$(document).on('click', '#update-btn, #update-commit-btn', function(event) {
+		console.log("dfgfggggggggg");
 		// event.preventDefault();
 		event.stopImmediatePropagation();
 		if (submit) {
@@ -387,17 +396,19 @@ $$(document).on('page:init', '.page[data-name="entry-edit"]', function (e) {
 			let status = $$(this).attr('data-status');
 			let commit_entry = ($$(this).attr('id') == 'update-commit-btn') ? true : false;
 			let formData = app.form.convertToData('#form-edit-entry');
-			let orig_photo = $$('#capture-photo').attr('src');
+			console.log("do we get here,", formData);
+			// let orig_photo = $$('#capture-photo').attr('src');
 
 			// console.log(formData);
 
-			if (checkEntryFields(formData)) {
+			if (formData) {
 				let executeQuery = 'SELECT entry_title, entry_subtitle FROM form WHERE form_id = ?;';
 				let fields = [form_id];
 				db.transaction(function(transaction) {
 					transaction.executeSql(executeQuery, fields, 
 						function(tx, result) {
 							let form = result.rows.item(0);
+							console.log("te fooorm, ", form);
 
 
 							// let titles = title_maker(form, formData);
@@ -422,15 +433,17 @@ $$(document).on('page:init', '.page[data-name="entry-edit"]', function (e) {
 							// data.entry_subtitle = data.entry_subtitle.trim();
 
 							// Move photo to data directory and update file path
-							if (formData.photo != orig_photo) {
-								moveFile(formData.photo);
-								formData.photo = formData.photo.replace(cordova.file.externalCacheDirectory, cordova.file.externalDataDirectory);
-							}
+							// if (formData.photo != orig_photo) {
+							// 	moveFile(formData.photo);
+							// 	formData.photo = formData.photo.replace(cordova.file.externalCacheDirectory, cordova.file.externalDataDirectory);
+							// }
 
 							if (status == 1000) {
 								formData.entity_type = 'baseline';
 							} else if (status == 1110) {
 								formData.entity_type = 'followup';
+							}else if (status == 1100) {
+								formData.entity_type = 'baseline';
 							}
 
 							formData.creator_id = app_user.user_id;
@@ -438,17 +451,28 @@ $$(document).on('page:init', '.page[data-name="entry-edit"]', function (e) {
 
 							let timeStamp = new Date().getTime();
 							entry = {};
+							console.log("iiiiiiiiiiiii", formData);
 							// entry.entry_id = entry_prefix + timeStamp;
 							entry.entry_id = formData.entry_id;
+							console.log("entryid", entry.entry_id);
 							entry.form_id = form_id;
-							entry.title = titles.title;
-							entry.subtitle = titles.subtitle;
+							console.log("form id", form_id);
+
+							entry.title = JSON.parse(form.entry_title);
+							console.log("entry.title", entry.title);
+							
+							entry.subtitle = JSON.parse(form.entry_subtitle);
+							console.log("entry_subtitle", entry.subtitle);
 							entry.responses = JSON.stringify(formData);
+							console.log("entry.responses", entry.responses);
 							// entry.responses = formData;
 							entry.status = status;
+							console.log("entry.status", entry.status);
 							entry.created_at = formData.created_at;
+							console.log("entry.created_at ", entry.created_at);
+							console.log("entity_type ", formData.entity_type);
 
-							console.log(entry);
+							//console.log(entity_type, entry);
 
 
 							// let timeStamp = new Date().getTime();
@@ -472,7 +496,10 @@ $$(document).on('page:init', '.page[data-name="entry-edit"]', function (e) {
 							// 	entry.json_entry_followup_data = JSON.stringify(formData);
 							// }
 							// let entity_type = (status == 1000) ? 'baseline' : 'followup' ;
-							updateEntry(entry, entity_type, commit_entry, true);
+							console.log("jkhkjjk", entry);
+							console.log("commit_entry", commit_entry);
+							updateEntry(entry, 'baseline', commit_entry, true);
+
 
 							mainView.router.back(mainView.router.previousRoute.url, {ignoreCache: true, force:true, reloadPrevious: true});
 							app.toast.show({

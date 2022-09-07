@@ -70,7 +70,6 @@ var app = new Framework7({
 									forms.push(result.rows.item(i));
 								}
 								data.forms = forms;
-								// console.log(data);
 								resolve(
 									
 									{templateUrl: './pages/home.html'}, // list of forms
@@ -109,7 +108,6 @@ var app = new Framework7({
 							let form = result.rows.item(0);
 							data.form_id = form.form_id;
 							data.title = form.title;
-							console.log(data);
 							resolve(
 								{templateUrl: './pages/entry-groups.html'},
 								{context: data}
@@ -163,7 +161,6 @@ var app = new Framework7({
 
 							for (var i = 0; i < result.rows.length; i++) {
 								let c_entry = result.rows.item(i);
-								// console.log(c_entry);
 
 								// basline draft and commit
 								if (group == 'all' || group == 'baseline') {
@@ -193,7 +190,6 @@ var app = new Framework7({
 							$$(document).on('page:init', '.page[data-name="entries"]', function (e) {
 
 								if (group == 'followup') {
-									// console.log(entries_fu_new);
 
 									var virtualList1 = app.virtualList.create({
 										el: '.virtual-list-new',
@@ -387,7 +383,7 @@ var app = new Framework7({
 											data.title = entryData.title;
 											data.status = entryData.status;
 											data.is_geotagged = form.is_geotagged;
-											data.is_photograph = form.is_photograph;
+											// data.is_photograph = form.is_photograph;
 
 											conditional_logic = JSON.parse(form.conditional_logic);
 											resolve(
@@ -440,8 +436,7 @@ var app = new Framework7({
 								db.transaction(function(transaction) {
 									transaction.executeSql(executeQuery, fields, 
 										function(tx, result) {
-											let rs = result.rows.item(0);
-											
+											let rs = result.rows.item(0);											
 											let form = {};
 											form.form_id = rs.form_id;
 											form.questions = JSON.parse(rs.question_list);
@@ -452,6 +447,7 @@ var app = new Framework7({
 											data.title = entryData.title;
 											data.is_geotagged = rs.is_geotagged;
 											data.is_photograph = rs.is_photograph;
+											 data.status = entryData.status;
 
 											let entry_data = undefined;
 											if (entryData.status == 1000 || entryData.status == 1100) {
@@ -461,9 +457,12 @@ var app = new Framework7({
 												data.questions = mapData(form, JSON.parse(entryData.responses));
 												entry_data = JSON.parse(entryData.responses);
 											}
-											data.coordinates = entry_data.coordinates;
-											data.photo = entry_data.photo;
-											data.status = entry_data.status;
+											 data.coordinates = entry_data[0].coordinates;
+											// data.photo = entry_data[0].photo;
+
+											
+											
+											
 											resolve(
 												{templateUrl: './pages/entry-view.html'}, // list of forms
 												{context: data}
@@ -481,6 +480,7 @@ var app = new Framework7({
 						);
 					});
 				} else if (routeTo.query.action == 'edit') {
+					
 					let executeQuery = 'SELECT * FROM entry WHERE entry_id = ?;';
 					let fields = [routeTo.query.id];
 					db.transaction(function(transaction) {
@@ -510,16 +510,32 @@ var app = new Framework7({
 											);
 
 											$$(document).on('page:init', '.page[data-name="entry-edit"]', function (e) {
+												
 												setTimeout( function() {
 													// let entry = entryData.status == 1000 ? JSON.parse(entryData.json_entry_data) : JSON.parse(entryData.json_entry_followup_data);
 													let entry = JSON.parse(entryData.responses);
 													autoselect = false;
-													app.form.fillFromData('#form-edit-entry', entry);
+													let prefill = {};
+
+													for (let [key, value] of Object.entries(entry[0])) {
+														console.log(`${key}: ${value}`);
+														prefill[key] = value;
+													  }
+													// 
+													// for (var i = 0; i < followup_prefill.length; i++) {
+													// 	let key = 'qn'+followup_prefill[i];
+														
+													// 	prefill[key] = entry[0][key];
+													// }
+													// console.log(prefill);
+													// app.form.fillFromData('#form-add-entry-followup', prefill);
+													// autoselect = true;
+													app.form.fillFromData('#form-edit-entry', prefill);
 													autoselect = true;
 													// Show picture if photo is enabled for form
-													if (data.is_photograph == 1) {
-														$$('#capture-photo').attr('src', entry.photo);
-													}
+													// if (data.is_photograph == 1) {
+													// 	$$('#capture-photo').attr('src', entry.photo);
+													// }
 												}, 1000);
 											});
 
