@@ -318,7 +318,7 @@ $$(document).on('page:init', '.page[data-name="entry-followup-add"]', function (
 
 							let timeStamp = new Date().getTime();
 							entry = {};
-							entry.entry_id = entry_prefix + timeStamp;
+							entry.entry_id = entry_id;
 							entry.form_id = form_id;
 							entry.title = JSON.parse(form.entry_title);
 							entry.subtitle = JSON.parse(form.entry_subtitle);
@@ -326,12 +326,6 @@ $$(document).on('page:init', '.page[data-name="entry-followup-add"]', function (
 							entry.responses = formData;
 							entry.status = 1110;
 							entry.created_at = formData.created_at;
-
-
-
-
-
-
 
 
 							// let timeStamp = new Date().getTime();

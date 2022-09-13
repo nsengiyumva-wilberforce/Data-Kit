@@ -365,7 +365,7 @@ var app = new Framework7({
 						transaction.executeSql(executeQuery, fields, 
 							function(tx, result) {
 								let entryData = result.rows.item(0);
-								console.log(entryData);
+								console.log("the selectec entry is",entryData);
 
 								let executeQuery = 'SELECT form_id, question_list, conditional_logic, followup_prefill, is_geotagged, is_photograph FROM form WHERE form_id = ?;';
 								let fields = [entryData.form_id];
