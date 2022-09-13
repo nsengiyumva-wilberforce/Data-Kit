@@ -682,7 +682,8 @@ function commitEntry(entry_id) {
 				let form_post_url = undefined;
 				if (responses.entity_type == 'baseline') {
 					// form_post_url = base_url+'commit-form';
-					form_post_url = base_url + 'entry/add-followup';
+					form_post_url = base_url + 'entry/add';
+					console.log("the baaae, ",form_post_url)
 				} else if (responses.entity_type == 'followup') {
 					// form_post_url = base_url+'commit-followup-form';
 					form_post_url = base_url + 'entry/add-followup';
@@ -690,7 +691,6 @@ function commitEntry(entry_id) {
 
 
 				app.request.post(form_post_url, form_data, function (result) {
-					console.log(result);
 					let json_obj = JSON.parse(result);
 					if (json_obj.status == 201) {
 						// Clean photo and convert file to base64
@@ -734,7 +734,7 @@ function commitEntry(entry_id) {
 					}
 					
 				}, function (error) {
-					alert('Commit was unsuccessfulkk');
+					alert('Commit was unsuccessfull');
 				});
 			},
 			function (tx, error) {

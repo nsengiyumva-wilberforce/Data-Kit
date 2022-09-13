@@ -141,7 +141,6 @@ function downloadRegionEntries(region_id, form_id) {
 	app.request.getJSON(organisations_api, function (organisation_data) {
 		console.log(organisation_data);
 		let organisations = organisation_data.data.reverse();
-		console.log("the dataaaaa", organisations )
 		for (var i = 0; i < organisations.length; i++) {
 			let status = 1100;
 			let is_creator = organisations[i].creator_id == app_user.user_id ? 1 : 0 ;
