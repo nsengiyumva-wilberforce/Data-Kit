@@ -606,7 +606,8 @@ function insertEntry(entry, commit_entry = false) {
 
 
 function updateEntry(data, commit_entry = false, notify = true) {
-	console.log("the updatesssss")
+	console.log("hh", data.entry_id)
+	
 // function updateEntry(data, entry_type = 'baseline', commit_entry = false, notify = true) {
 	// let executeQuery = undefined;
 	// let fields = undefined;
@@ -626,7 +627,7 @@ function updateEntry(data, commit_entry = false, notify = true) {
 	}, function(error) {
 		console.log('Transaction ERROR: ' + error.message);
 	}, function() {
-		console.log('Updated database OK');
+		console.log('Updated database OK',);
 		if (notify) {
 			app.toast.show({text: 'Entry Changes Saved', closeTimeout: 3000});
 		}
@@ -638,6 +639,7 @@ function updateEntry(data, commit_entry = false, notify = true) {
 
 
 function updateEntryStatus(entry_id, status) {
+	console.log("56666666666666666")
 
 	let executeQuery = 'UPDATE entry SET status = ? WHERE entry_id = ?;'
 	let fields = [status, entry_id];
@@ -653,11 +655,13 @@ function updateEntryStatus(entry_id, status) {
 
 // function commitEntry(entry_id, entry_type = 'baseline') {
 function commitEntry(entry_id) {
+	console.log("lllllllllllllllllllllll", entry_id)
 	let executeQuery = 'SELECT * FROM entry WHERE entry_id = ?';
 	let fields = [entry_id];
 	db.transaction(function(transaction) {
 		transaction.executeSql(executeQuery, fields, 
 			function(tx, result) {
+				console.log("THE RESULT",result);
 				let entry = result.rows.item(0);
 				console.log(entry);
 

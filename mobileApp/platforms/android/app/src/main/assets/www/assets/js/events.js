@@ -328,12 +328,6 @@ $$(document).on('page:init', '.page[data-name="entry-followup-add"]', function (
 							entry.created_at = formData.created_at;
 
 
-
-
-
-console.log("the follow up isssss", entry_id)
-
-
 							// let timeStamp = new Date().getTime();
 							// entry = {};
 							// entry.entry_id = entry_id;

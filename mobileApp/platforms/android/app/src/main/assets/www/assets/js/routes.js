@@ -450,14 +450,28 @@ var app = new Framework7({
 											 data.status = entryData.status;
 
 											let entry_data = undefined;
-											if (entryData.status == 1000 || entryData.status == 1100) {
+											if (entryData.status == 1000) {
+												data.questions = mapData(form, JSON.parse(entryData.responses));
+												// if(mapData(form, JSON.parse(entryData.responses)) == undefined){
+												// data.questions = mapData(form, JSON.parse(entryData.responses)[0]);
+												// }
+												// else data.questions = mapData(form, JSON.parse(entryData.responses));
+              
+												entry_data = JSON.parse(entryData.responses);
+											} 
+											else if(entryData.status == 1100){
 												data.questions = mapData(form, JSON.parse(entryData.responses)[0]);
 												entry_data = JSON.parse(entryData.responses);
-											} else if(entryData.status == 1110 || entryData.status == 1111) {
+											}
+											else if(entryData.status == 1110 || entryData.status == 1111) {
 												data.questions = mapData(form, JSON.parse(entryData.responses));
 												entry_data = JSON.parse(entryData.responses);
 											}
+											if(entry_data.coordinates == undefined){
 											 data.coordinates = entry_data[0].coordinates;
+											}
+											else data.coordinates = entry_data.coordinates;
+
 											// data.photo = entry_data[0].photo;
 
 											
