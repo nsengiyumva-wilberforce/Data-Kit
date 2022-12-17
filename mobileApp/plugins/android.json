@@ -9,28 +9,28 @@
   "installed_plugins": {
     "cordova-plugin-camera": {
       "ANDROIDX_CORE_VERSION": "1.6.+",
-      "PACKAGE_NAME": "com.aws.surveyking.app"
+      "PACKAGE_NAME": "com.surveymaster.app"
     },
     "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.aws.surveyking.app"
+      "PACKAGE_NAME": "com.surveymaster.app"
     },
     "cordova-plugin-geolocation": {
       "GPS_REQUIRED": "true",
-      "PACKAGE_NAME": "com.aws.surveyking.app"
+      "PACKAGE_NAME": "com.surveymaster.app"
     },
     "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.aws.surveyking.app"
+      "PACKAGE_NAME": "com.surveymaster.app"
     },
     "cordova-plugin-screen-orientation": {
-      "PACKAGE_NAME": "com.aws.surveyking.app"
+      "PACKAGE_NAME": "com.surveymaster.app"
     },
     "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "com.aws.surveyking.app"
+      "PACKAGE_NAME": "com.surveymaster.app"
     }
   },
   "dependent_plugins": {
     "es6-promise-plugin": {
-      "PACKAGE_NAME": "com.aws.surveyking.app"
+      "PACKAGE_NAME": "com.surveymaster.app"
     }
   }
 }

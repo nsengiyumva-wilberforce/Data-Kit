@@ -1,0 +1,220 @@
+<div data-name="entry-edit" class="page">
+
+	<!-- Top Navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="left">
+				<a href="#" class="link back">
+					<i class="f7-icons">chevron_left</i>
+				</a>
+			</div>
+			<div class="title">Edit: {{title}}</div>
+			<div class="right">
+				<!-- <a href="/entry/?id=1&action=edit" class="link">
+					<i class="f7-icons">edit</i>
+				</a> -->
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content">
+
+		<form action="" id="form-edit-entry">
+			<input type="hidden" name="entry_id" value="{{entry_id}}">
+			{{#each questions}}
+			<div class="card" id="card-qn{{question_id}}">
+				<div class="card-header no-hairline padding-top">
+					<div>
+						<small class="display-block">Question {{js "this.@index +1"}}/{{../count}}</small>
+						<span class="display-block" style="font-weight: bold;">{{question}}</span>
+					</div>
+				</div>
+	
+				{{#js_if "this.answer_type == 'radio'"}}
+				<div class="card-content card-content-padding padding-bottom">
+					<div class="list no-hairlines no-hairlines-between margin-bottom">
+						<ul>
+						{{#each answer_values}}
+							<li>
+								<label class="item-radio item-content">
+									<input type="radio" name="qn{{../question_id}}" value="{{this}}"/>
+									<i class="icon icon-radio"></i>
+									<div class="item-inner">
+										<div class="item-title">{{this}}</div>
+									</div>
+								</label>
+							</li>
+						{{/each}}
+						</ul>
+					</div>
+				</div>
+				{{/js_if}}
+	
+				{{#js_if "this.answer_type == 'checkbox'"}}
+				<div class="card-content card-content-padding padding-bottom">
+					<div class="list no-hairlines no-hairlines-between margin-bottom">
+						<ul>
+						{{#each answer_values}}
+							<li>
+								<label class="item-checkbox item-content">
+									<input type="checkbox" name="qn{{../question_id}}" value="{{this}}"/>
+									<i class="icon icon-checkbox"></i>
+									<div class="item-inner">
+										<div class="item-title">{{this}}</div>
+									</div>
+								</label>
+							</li>
+						{{/each}}
+						</ul>
+					</div>
+				</div>
+				{{/js_if}}
+	
+				{{#js_if "this.answer_type == 'text'"}}
+				<div class="card-content padding-bottom">
+					<div class="list">
+						<ul>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-input-wrap">
+										<input type="text" name="qn{{question_id}}" placeholder="">
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				{{/js_if}}
+	
+				{{#js_if "this.answer_type == 'date'"}}
+				<div class="card-content padding-bottom">
+					<div class="list">
+						<ul>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-input-wrap">
+										<input type="date" name="qn{{question_id}}" placeholder="">
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				{{/js_if}}
+	
+				{{#js_if "this.answer_type == 'number'"}}
+				<div class="card-content padding-bottom">
+					<div class="list">
+						<ul>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-input-wrap">
+										<input type="number" name="qn{{question_id}}" placeholder="">
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				{{/js_if}}
+	
+				{{#js_if "this.answer_type == 'app_list'"}}
+				<div class="card-content padding-bottom">
+					<div class="list">
+						<ul>
+							<li class="item-content item-input">
+								<div class="item-inner item-input">
+									<div class="item-input-wrap">
+										<select name="qn{{question_id}}" class="app-list" data-db-table="{{answer_values.db_table}}">
+										</select>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				{{/js_if}}
+	
+			</div>
+			{{/each}}
+	
+			{{#js_if "this.is_geotagged === 1"}}		
+			<div class="card">
+				<div class="card-header no-hairline padding-top">
+					<div>
+						<span class="display-block bold">Location Cordinates</span>
+					</div>
+				</div>
+				<div class="card-content padding-bottom">
+					<div class="list no-hairline no-hairlines-between">
+						<ul>
+							<li class="item-content item-input">
+								<div class="item-media">
+									<i class="f7-icons">placemark</i>
+								</div>
+								<div class="item-inner no-margin-left">
+									<div class="item-input-wrap">
+										<input type="text" name="coordinates" id="form-geo-coordinates" disabled="disabled">
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content">
+								<div class="item-inner display-block">
+									<div class="row">
+										<a href="#" id="geotag-entry" class="col-33 button button button-fill">Set</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			{{/js_if}}
+	
+			<!-- {{#js_if "this.is_photograph === 1"}}
+			<div class="card">
+				<div class="card-header no-hairline padding-top">
+					<div>
+						<span class="display-block bold">Photo</span>
+					</div>
+				</div>
+				<div class="card-content">
+					<input type="hidden" name="photo">
+					<img src="assets/images/photo-placeholder.png" id="capture-photo" alt="" width="100%">
+				</div>
+				<div class="card-footer">
+					<small>Tap placeholder to take a photo</small>
+				</div>
+			</div>
+			{{/js_if}} -->
+		</form>
+
+
+		<div class="row margin-bottom">
+			<a href="#" class="col button button-fill button-form actions-open" data-actions=".form-actions">Complete</a>
+		</div>
+
+
+	</div>
+
+	<!-- Actions Modal -->
+	<div class="actions-modal form-actions">
+		<div class="actions-group">
+			<div class="actions-label">What would you like to do?</div>
+			<div class="actions-button actions-button-bold">
+				<div class="actions-button-text actions-close" id="update-btn" data-form-id="{{form_id}}" data-status="{{status}}">Save changes</div>
+			</div>
+			<div class="actions-button actions-button-bold">
+				<div class="actions-button-text actions-close" id="update-commit-btn" data-form-id="{{form_id}}" data-status="{{status}}">Save and commit</div>
+			</div>
+			<div class="actions-button">
+				<div class="actions-button-text actions-close">Cancel</div>
+			</div>
+		</div>
+	</div>
+
+</div>

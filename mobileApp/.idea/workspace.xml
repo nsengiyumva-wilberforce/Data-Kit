@@ -1,6 +1,320 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="797e8aa1-5f88-45a1-ae77-ef67d8d3e1f4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/nopt" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/nopt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/android-versions/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/android-versions/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/range.bnf" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/range.bnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/android-versions/node_modules/semver/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nopt/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nopt/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nopt/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nopt/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nopt/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nopt/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nopt/bin/nopt.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nopt/bin/nopt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nopt/lib/nopt.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nopt/lib/nopt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/nopt/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nopt/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/bin/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/bin/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/classes/comparator.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/classes/comparator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/classes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/classes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/classes/range.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/classes/range.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/classes/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/classes/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/clean.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/clean.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/cmp.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/cmp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/coerce.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/coerce.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/compare-build.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/compare-build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/compare-loose.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/compare-loose.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/compare.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/compare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/diff.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/diff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/eq.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/eq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/gt.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/gt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/gte.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/gte.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/inc.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/inc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/lt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/lte.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/lte.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/major.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/major.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/minor.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/minor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/neq.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/neq.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/patch.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/patch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/prerelease.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/prerelease.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/rcompare.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/rcompare.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/rsort.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/rsort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/satisfies.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/satisfies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/functions/valid.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/functions/valid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/internal/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/internal/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/internal/debug.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/internal/debug.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/internal/identifiers.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/internal/identifiers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/internal/parse-options.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/internal/parse-options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/internal/re.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/internal/re.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/preload.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/preload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/range.bnf" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/range.bnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/gtr.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/gtr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/intersects.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/intersects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/ltr.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/ltr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/max-satisfying.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/max-satisfying.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/min-satisfying.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/min-satisfying.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/min-version.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/min-version.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/outside.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/outside.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/simplify.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/simplify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/subset.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/subset.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/to-comparators.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/to-comparators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/semver/ranges/valid.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/semver/ranges/valid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/which/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/which/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/which/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/which/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/which/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/which/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/which/bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/which/bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/which/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/which/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/which/which.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/which/which.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/android.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/assets/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/cordova_plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages/entry-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/pages/entry-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-camera/www/Camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-camera/www/Camera.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-camera/www/CameraConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-camera/www/CameraConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-camera/www/CameraPopoverHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-camera/www/CameraPopoverHandle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-camera/www/CameraPopoverOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-camera/www/CameraPopoverOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/DirectoryEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/DirectoryEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/DirectoryReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/DirectoryReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/Entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/Entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/File.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/File.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileUploadOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileUploadOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileUploadResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileUploadResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileWriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/FileWriter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/Flags.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/Flags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/LocalFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/LocalFileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/Metadata.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/Metadata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/ProgressEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/ProgressEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/android/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/android/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/browser/isChrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/browser/isChrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/fileSystemPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/fileSystemPaths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/fileSystems-roots.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/fileSystems-roots.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/fileSystems.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/fileSystems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/requestFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/requestFileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-geolocation/www/PositionError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-geolocation/www/PositionError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-geolocation/www/android/geolocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-geolocation/www/android/geolocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-network-information/www/Connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-network-information/www/Connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-network-information/www/network.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-network-information/www/network.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-screen-orientation/www/screenorientation.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-plugin-screen-orientation/www/screenorientation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-sqlite-storage/www/SQLitePlugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/cordova-sqlite-storage/www/SQLitePlugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/es6-promise-plugin/www/promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/plugins/es6-promise-plugin/www/promise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/cdv-gradle-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/cdv-gradle-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/cdv-gradle-name.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/cdv-gradle-name.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/cordova_plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-camera/www/Camera.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-camera/www/Camera.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-camera/www/CameraConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-camera/www/CameraConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-camera/www/CameraPopoverHandle.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-camera/www/CameraPopoverHandle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-camera/www/CameraPopoverOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-camera/www/CameraPopoverOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/DirectoryEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/DirectoryEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/DirectoryReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/DirectoryReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/Entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/Entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/File.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/File.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileEntry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileReader.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileReader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileUploadOptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileUploadOptions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileUploadResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileUploadResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileWriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/FileWriter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/Flags.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/Flags.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/LocalFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/LocalFileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/Metadata.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/Metadata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/ProgressEvent.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/ProgressEvent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/android/FileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/android/FileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/browser/isChrome.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/browser/isChrome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/fileSystemPaths.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/fileSystemPaths.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/fileSystems-roots.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/fileSystems-roots.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/fileSystems.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/fileSystems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/requestFileSystem.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/requestFileSystem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-geolocation/www/PositionError.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-geolocation/www/PositionError.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-geolocation/www/android/geolocation.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-geolocation/www/android/geolocation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-network-information/www/Connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-network-information/www/Connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-network-information/www/network.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-network-information/www/network.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-screen-orientation/www/screenorientation.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-plugin-screen-orientation/www/screenorientation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-sqlite-storage/www/SQLitePlugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/cordova-sqlite-storage/www/SQLitePlugin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/platform_www/plugins/es6-promise-plugin/www/promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/platform_www/plugins/es6-promise-plugin/www/promise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/android.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/.bin/cake" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/.bin/cake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/.bin/coffee" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/.bin/coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/.bin/which" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/.bin/which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/bin/cake" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/bin/cake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/bin/coffee" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/bin/coffee" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/cake.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/cake.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/coffee-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/coffee-script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/command.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/command.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/grammar.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/grammar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/lexer.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/lexer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/nodes.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/nodes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/optparse.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/optparse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/repl.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/repl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/rewriter.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/rewriter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/scope.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/scope.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/sourcemap.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/lib/coffee-script/sourcemap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/repl.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/coffeescript/repl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/range.bnf" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/range.bnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/semver.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/semver/semver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/bin/which" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/bin/which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/which.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/cordova-sqlite-storage/node_modules/which/which.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/assets/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/assets/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/pages/entry-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/pages/entry-add.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[05302339C4007325]" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2G9EEtkqOZozutkPbjIvounYybs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="-b" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="797e8aa1-5f88-45a1-ae77-ef67d8d3e1f4" name="Changes" comment="" />
+      <created>1665792290344</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665792290344</updated>
+    </task>
+    <servers />
   </component>
 </project>

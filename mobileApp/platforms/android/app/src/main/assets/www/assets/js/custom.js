@@ -409,10 +409,11 @@ $$('#capture-photo').attr('src',imageURI);
 })
 
 function photoPath() {
-	navigator.camera.getPicture(function(cached_photo_path) {
+	navigator.camera.getPicture(function(cached_photo_path, event) {
 		console.log("the path",cached_photo_path);
 		$$('input[name="photo"]').val(cached_photo_path);
 		$$('#capture-photo').attr('src',cached_photo_path);
+		event.preventDefault();
 	}, function(err) {
 		console.log(err);
 	}, { quality: 50, destinationType: Camera.DestinationType.FILE_URI });
@@ -674,9 +675,8 @@ function commitEntry(entry_id) {
 					responses: entry.responses,
 					created_at: entry.created_at
 				}
-
 				let responses = JSON.parse(entry.responses);
-
+				console.log(responses);
 				// if (responses.entity_type == 'baseline') {
 				// 	form_data.creator_id = app_user.user_id;
 				// } else if (entry_type == 'followup') {
@@ -687,7 +687,6 @@ function commitEntry(entry_id) {
 				if (responses.entity_type == 'baseline') {
 					// form_post_url = base_url+'commit-form';
 					form_post_url = base_url + 'entry/add';
-					console.log("the baaae, ",form_post_url)
 				} else if (responses.entity_type == 'followup') {
 					// form_post_url = base_url+'commit-followup-form';
 					form_post_url = base_url + 'entry/add-followup';
@@ -696,21 +695,24 @@ function commitEntry(entry_id) {
 
 				app.request.post(form_post_url, form_data, function (result) {
 					let json_obj = JSON.parse(result);
+					console.log(form_data)
 					if (json_obj.status == 201) {
-						// Clean photo and convert file to base64
-						// let entry_data = undefined;
-						// if (responses.entity_type == 'baseline') {
-						// 	entry_data = JSON.parse(entry.json_entry_data);
-						// } else if (responses.entity_type == 'followup') {
-						// 	entry_data = JSON.parse(entry.json_entry_followup_data);
-						// }
+						//Clean photo and convert file to base64
+						let entry_data = undefined;
+						if (responses.entity_type == 'baseline') {
+							entry_data = JSON.parse(entry.responses);
+						} else if (responses.entity_type == 'followup') {
+							console.log(entry)
+							entry_data = JSON.parse(entry.json_entry_followup_data);
+						}
 
-						// let data = {};
-						// if (responses.photo != undefined) {
-						// 	console.log('photo conversion');
-						// 	// let photo_src = responses.entity_type == 'baseline' ? 'json_response' : 'json_followup';
-						// 	commitFile(responses.photo, app_user.user_id, entry.entry_id);
-						// }
+						let data = {};
+						console.log(responses.photo);
+						if (responses.photo != undefined) {
+							console.log('photo conversion');
+							// let photo_src = responses.entity_type == 'baseline' ? 'json_response' : 'json_followup';
+							commitFile(responses.photo, app_user.user_id, entry.entry_id);
+						}
 
 						console.log('Succesfully commited');
 						app.toast.show({text: 'Entry has been committed', closeTimeout: 3000});

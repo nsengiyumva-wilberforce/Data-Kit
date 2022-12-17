@@ -1,12 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
   module.exports = [
     {
-      "id": "es6-promise-plugin.Promise",
-      "file": "plugins/es6-promise-plugin/www/promise.js",
-      "pluginId": "es6-promise-plugin",
-      "runs": true
-    },
-    {
       "id": "cordova-plugin-camera.Camera",
       "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
       "pluginId": "cordova-plugin-camera",
@@ -242,6 +236,12 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
+      "id": "es6-promise-plugin.Promise",
+      "file": "plugins/es6-promise-plugin/www/promise.js",
+      "pluginId": "es6-promise-plugin",
+      "runs": true
+    },
+    {
       "id": "cordova-plugin-screen-orientation.screenorientation",
       "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
       "pluginId": "cordova-plugin-screen-orientation",
@@ -259,13 +259,12 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     }
   ];
   module.exports.metadata = {
-    "es6-promise-plugin": "4.2.2",
     "cordova-plugin-camera": "6.0.0",
     "cordova-plugin-file": "6.0.2",
     "cordova-plugin-geolocation": "4.1.0",
     "cordova-plugin-network-information": "3.0.0",
+    "es6-promise-plugin": "4.2.2",
     "cordova-plugin-screen-orientation": "3.0.2",
-    "cordova-plugin-whitelist": "1.3.4",
     "cordova-sqlite-storage": "6.0.0"
   };
 });
